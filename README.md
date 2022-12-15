@@ -1,5 +1,5 @@
 # Проект: Место
-Ссылка: https://tashaslon.github.io/russian-travel/
+Ссылка: https://tashaslon.github.io/mesto/
 
 Это проект об интересных местах в России.
 
