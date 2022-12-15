@@ -1,0 +1,19 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+  gap: 20px 17px;
+  justify-content: center;
+
+  max-width: 880px;
+
+  margin: 0 auto;
+  padding: 36px 19px 0;
+
+  list-style: none;
+}
+
+@media screen and (min-width: 918px) {
+  .gallery {
+    padding: 50px 0 0;
+  }
+}

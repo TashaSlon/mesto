@@ -1,0 +1,5 @@
+.card__like_active {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(143deg) brightness(97%) contrast(101%);
+  color: #000;
+  fill: #000;
+}

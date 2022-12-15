@@ -1,0 +1,12 @@
+.btn_edit__image {
+  display: block;
+
+  margin: 17px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .btn_edit__image {
+    width: 10px;
+    height: 10px;
+  }
+}

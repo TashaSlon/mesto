@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Место</title>
+    <link rel="stylesheet" href="./pages/index.css">
+  </head>
+  <body>
+  <div class="page">
+    <header class="header">
+      <img src="./images/logo.svg" class="logo" alt="Логотип Место. Россия">
+      <div class="header__divider"></div>
+    </header>
+    <main class="content">
+      <section class="profile">
+        <div class="profile__info">
+          <img src="./images/avatar.jpg" class="avatar" alt="Аватар пользователя">
+          <div class="profile__text">
+            <button class="btn btn_edit">
+              <img src="./images/edit.svg" alt="Карандаш" class="btn_edit__image">
+            </button>
+            <div>
+              <h1 class="profile__name">Наталья Плюснина</h1>
+              <p class="profile__activity">Frontend-разработчик</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn_add">
+          <img src="./images/plus.svg" alt="Плюс" class="btn__add__image">
+        </button>
+      </section>
+      <ul class="gallery">
+        <li class="card">
+          <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="card__image">
+          <div class="card__description">
+            <p class="card__name">Карачаевск</p>
+            <img src="./images/like.svg" class="card__like card__like_active">
+          </div>
+        </li>
+        <li class="card">
+          <img src="./images/Dombay.jpg" alt="Домбай" class="card__image">
+          <div class="card__description">
+            <p class="card__name">Домбай</p>
+            <img src="./images/like.svg" class="card__like">
+          </div>
+        </li>
+        <li class="card">
+          <img src="./images/Elbrus.jpg" alt="Эльбрус" class="card__image">
+          <div class="card__description">
+            <p class="card__name">Эльбрус</p>
+            <img src="./images/like.svg" class="card__like">
+          </div>
+        </li>
+        <li class="card">
+          <img src="./images/Kizhi.jpg" alt="Кижи" class="card__image">
+          <div class="card__description">
+            <p class="card__name">Кижи</p>
+            <img src="./images/like.svg" class="card__like">
+          </div>
+        </li>
+        <li class="card">
+          <img src="./images/Sinskie-stolby.jpg" alt="Синские столбы" class="card__image">
+          <div class="card__description">
+            <p class="card__name">Синские столбы</p>
+            <img src="./images/like.svg" class="card__like">
+          </div>
+        </li>
+        <li class="card">
+          <img src="./images/sankt-peterburg.jpg" alt="Санкт-Петербург" class="card__image">
+          <div class="card__description">
+            <p class="card__name">Санкт-Петербург</p>
+            <img src="./images/like.svg" class="card__like">
+          </div>
+        </li>
+      </ul>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">&copy; 2022 Mesto Russia</p>
+    </footer>
+    <section class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__container">
+        <button class="btn btn_close">
+          <img src="./images/сlose.svg" class="btn_close__icon" alt="Закрыть">
+        </button>
+        <form class="edit-profile">
+          <h2 class="edit-profile__title">Редактировать профиль</h2>
+          <input type="text" class="edit-profile__field edit-profile__field_type_name" placeholder="Имя">
+          <input type="text" class="edit-profile__field edit-profile__field_type_activity" placeholder="О себе">
+          <button class="btn btn_save" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
