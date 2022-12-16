@@ -13,12 +13,12 @@
 @import url("../blocks/profile/__text/profile__text.css");
 @import url("../blocks/btn/btn.css");
 @import url("../blocks/btn/_type/btn_type_add.css");
-@import url("../blocks/btn/_type/btn_type_add_icon.css");
+@import url("../blocks/btn/_type/btn_type_add-icon.css");
 @import url("../blocks/btn/_type/btn_type_edit.css");
-@import url("../blocks/btn/_type/btn_type_edit_icon.css");
+@import url("../blocks/btn/_type/btn_type_edit-icon.css");
 @import url("../blocks/btn/_type/btn_type_save.css");
 @import url("../blocks/btn/_type/btn_type_close.css");
-@import url("../blocks/btn/_type/btn_type_close_icon.css");
+@import url("../blocks/btn/_type/btn_type_close-icon.css");
 @import url("../blocks/gallery/gallery.css");
 @import url("../blocks/card/card.css");
 @import url("../blocks/card/__description/card__description.css");
