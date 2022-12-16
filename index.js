@@ -1,7 +1,7 @@
 const editBtn = document.querySelector('.btn_type_edit');
 const editForm = document.querySelector('.popup');
 const closeBtn = editForm.querySelector('.btn_type_close');
-const saveBtn = document.querySelector('.btn_type_save');
+const form = document.querySelector('.edit-profile');
 const nameProfile = document.querySelector('.profile__name');
 const activityProfile = document.querySelector('.profile__activity');
 const nameForm = editForm.querySelector('.edit-profile__field_type_name');
@@ -26,4 +26,4 @@ function saveProfile(evt) {
 
 editBtn.addEventListener('click', openProfile);
 closeBtn.addEventListener('click', closeProfile);
-saveBtn.addEventListener('submit', saveProfile);
+form.addEventListener('submit', saveProfile);
