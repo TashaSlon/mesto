@@ -1,4 +1,4 @@
-.btn_close {
+.btn_type_close {
   position: absolute;
   top: -36px;
   right: 0;
@@ -6,13 +6,13 @@
   border: none;
 }
 
-.btn_close:hover {
+.btn_type_close:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (min-width: 515px) {
-  .btn_close {
+  .btn_type_close {
     right: -40px;
   }
 }

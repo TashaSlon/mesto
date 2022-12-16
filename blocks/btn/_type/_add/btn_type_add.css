@@ -1,4 +1,4 @@
-.btn_add {
+.btn_type_add {
   width: 282px;
   height: 50px;
 
@@ -7,13 +7,13 @@
   border-radius: 2px;
 }
 
-.btn_add:hover {
+.btn_type_add:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
-  .btn_add {
+  .btn_type_add {
     width: 150px;
 
     margin: 0;

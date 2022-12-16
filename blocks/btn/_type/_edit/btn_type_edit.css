@@ -1,4 +1,4 @@
-.btn_edit {
+.btn_type_edit {
   position: absolute;
   top: 35px;
   right: -28px;
@@ -11,13 +11,13 @@
   padding: 5.25px;
 }
 
-.btn_edit:hover {
+.btn_type_edit:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
-  .btn_edit {
+  .btn_type_edit {
     top: 16px;
     right: -42px;
 

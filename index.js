@@ -26,4 +26,4 @@ function saveProfile(evt) {
 
 editBtn.addEventListener('click', openProfile);
 closeBtn.addEventListener('click', closeProfile);
-saveBtn.addEventListener('click', saveProfile);
+saveBtn.addEventListener('submit', saveProfile);

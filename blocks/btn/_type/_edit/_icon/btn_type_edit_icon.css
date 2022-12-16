@@ -1,11 +1,11 @@
-.btn_edit__image {
+.btn_type_edit_icon {
   display: block;
 
   margin: 17px auto;
 }
 
 @media screen and (min-width: 768px) {
-  .btn_edit__image {
+  .btn_type_edit_icon {
     width: 10px;
     height: 10px;
   }
