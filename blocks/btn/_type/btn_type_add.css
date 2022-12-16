@@ -5,6 +5,11 @@
   margin: 33px auto 0;
   border: 2px solid #fff;
   border-radius: 2px;
+
+  background-image: url(../../../images/plus.svg);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .btn_type_add:hover {
@@ -17,5 +22,7 @@
     width: 150px;
 
     margin: 0;
+
+    background-size: 22px 22px;
   }
 }

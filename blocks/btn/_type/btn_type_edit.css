@@ -9,6 +9,11 @@
   height: 18px;
 
   padding: 5.25px;
+
+  background-image: url(../../../images/edit.svg);
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .btn_type_edit:hover {
@@ -23,5 +28,7 @@
 
     width: 24px;
     height: 24px;
+
+    background-size: 10px 10px;
   }
 }
