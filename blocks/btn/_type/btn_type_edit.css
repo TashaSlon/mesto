@@ -16,11 +16,6 @@
   background-position: center center;
 }
 
-.btn_type_edit:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-
 @media screen and (min-width: 768px) {
   .btn_type_edit {
     top: 16px;

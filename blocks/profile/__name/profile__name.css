@@ -1,5 +1,6 @@
 .profile__name {
   display: block;
+  max-width: 240px;
 
   margin: 0;
   padding-top: 27px;
@@ -15,6 +16,8 @@
 
 @media screen and (min-width: 768px) {
   .profile__name {
+    max-width: 405px;
+
     padding-top: 0;
 
     font-size: 42px;

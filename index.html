@@ -10,66 +10,67 @@
   <div class="page">
     <header class="header">
       <img src="./images/logo.svg" class="logo" alt="Логотип Место. Россия">
-      <div class="header__divider"></div>
     </header>
     <main class="content">
       <section class="profile">
         <div class="profile__info">
-          <img src="./images/avatar.jpg" class="avatar" alt="Аватар пользователя">
+          <img src="./images/avatar.jpg" class="profile__avatar" alt="Аватар пользователя">
           <div class="profile__text">
-            <button class="btn btn_type_edit"></button>
+            <button class="btn btn_type_edit btn_type_hover" type="button"></button>
             <div>
               <h1 class="profile__name">Наталья Плюснина</h1>
               <p class="profile__activity">Frontend-разработчик</p>
             </div>
           </div>
         </div>
-        <button class="btn btn_type_add"></button>
+        <button class="btn btn_type_add btn_type_hover" type="button"></button>
       </section>
-      <ul class="gallery">
-        <li class="card">
-          <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="card__image">
-          <div class="card__description">
-            <p class="card__name">Карачаевск</p>
-            <div class="card__like"></div>
-          </div>
-        </li>
-        <li class="card">
-          <img src="./images/Dombay.jpg" alt="Домбай" class="card__image">
-          <div class="card__description">
-            <p class="card__name">Домбай</p>
-            <div class="card__like"></div>
-          </div>
-        </li>
-        <li class="card">
-          <img src="./images/Elbrus.jpg" alt="Эльбрус" class="card__image">
-          <div class="card__description">
-            <p class="card__name">Эльбрус</p>
-            <div class="card__like"></div>
-          </div>
-        </li>
-        <li class="card">
-          <img src="./images/Kizhi.jpg" alt="Кижи" class="card__image">
-          <div class="card__description">
-            <p class="card__name">Кижи</p>
-            <div class="card__like"></div>
-          </div>
-        </li>
-        <li class="card">
-          <img src="./images/Sinskie-stolby.jpg" alt="Синские столбы" class="card__image">
-          <div class="card__description">
-            <p class="card__name">Синские столбы</p>
-            <div class="card__like"></div>
-          </div>
-        </li>
-        <li class="card">
-          <img src="./images/sankt-peterburg.jpg" alt="Санкт-Петербург" class="card__image">
-          <div class="card__description">
-            <p class="card__name">Санкт-Петербург</p>
-            <div class="card__like"></div>
-          </div>
-        </li>
-      </ul>
+      <section class="gallery">
+        <ul class="cards">
+          <li class="card">
+            <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="card__image">
+            <div class="card__description">
+              <p class="card__name">Карачаевск</p>
+              <button class="btn btn_type_like" type="button"></button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="./images/Dombay.jpg" alt="Домбай" class="card__image">
+            <div class="card__description">
+              <p class="card__name">Домбай</p>
+              <button class="btn btn_type_like" type="button"></button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="./images/Elbrus.jpg" alt="Эльбрус" class="card__image">
+            <div class="card__description">
+              <p class="card__name">Эльбрус</p>
+              <button class="btn btn_type_like" type="button"></button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="./images/Kizhi.jpg" alt="Кижи" class="card__image">
+            <div class="card__description">
+              <p class="card__name">Кижи</p>
+              <button class="btn btn_type_like" type="button"></button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="./images/Sinskie-stolby.jpg" alt="Синские столбы" class="card__image">
+            <div class="card__description">
+              <p class="card__name">Синские столбы</p>
+              <button class="btn btn_type_like" type="button"></button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="./images/sankt-peterburg.jpg" alt="Санкт-Петербург" class="card__image">
+            <div class="card__description">
+              <p class="card__name">Санкт-Петербург</p>
+              <button class="btn btn_type_like" type="button"></button>
+            </div>
+          </li>
+        </ul>
+      </section>
     </main>
     <footer class="footer">
       <p class="footer__text">&copy; 2022 Mesto Russia</p>
@@ -77,16 +78,16 @@
     <section class="popup">
       <div class="popup__overlay"></div>
       <div class="popup__container">
-        <button class="btn btn_type_close"></button>
-        <form class="edit-profile">
-          <h2 class="edit-profile__title">Редактировать профиль</h2>
-          <input type="text" class="edit-profile__field edit-profile__field_type_name" placeholder="Имя">
-          <input type="text" class="edit-profile__field edit-profile__field_type_activity" placeholder="О себе">
+        <button class="btn btn_type_close btn_type_hover" type="reset"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="edit-profile" name="edit-profile">
+          <input type="text" class="edit-profile__field edit-profile__field_type_name" placeholder="Имя" name="name">
+          <input type="text" class="edit-profile__field edit-profile__field_type_activity" placeholder="О себе" name="activity">
           <button class="btn btn_type_save" type="submit">Сохранить</button>
         </form>
       </div>
     </section>
     </div>
-    <script src="index.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

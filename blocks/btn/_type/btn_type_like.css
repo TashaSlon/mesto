@@ -1,11 +1,14 @@
-.card__like {
+.btn_type_like {
   width: 22px;
   height: 19px;
 
+  border: none;
+
   background-image: url(../../../images/like.svg);
+  background-size: 22px 19px;
 }
 
-.card__like:hover {
+.btn_type_like:hover {
   opacity: 0.5;
   cursor: pointer;
 }

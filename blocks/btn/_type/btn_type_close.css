@@ -14,11 +14,6 @@
   background-position: center center;
 }
 
-.btn_type_close:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-
 @media screen and (min-width: 515px) {
   .btn_type_close {
     right: -40px;
