@@ -27,67 +27,47 @@
       </section>
       <section class="gallery">
         <ul class="cards">
-          <li class="card">
-            <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="card__image">
-            <div class="card__description">
-              <p class="card__name">Карачаевск</p>
-              <button class="btn btn_type_like" type="button"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img src="./images/Dombay.jpg" alt="Домбай" class="card__image">
-            <div class="card__description">
-              <p class="card__name">Домбай</p>
-              <button class="btn btn_type_like" type="button"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img src="./images/Elbrus.jpg" alt="Эльбрус" class="card__image">
-            <div class="card__description">
-              <p class="card__name">Эльбрус</p>
-              <button class="btn btn_type_like" type="button"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img src="./images/Kizhi.jpg" alt="Кижи" class="card__image">
-            <div class="card__description">
-              <p class="card__name">Кижи</p>
-              <button class="btn btn_type_like" type="button"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img src="./images/Sinskie-stolby.jpg" alt="Синские столбы" class="card__image">
-            <div class="card__description">
-              <p class="card__name">Синские столбы</p>
-              <button class="btn btn_type_like" type="button"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img src="./images/sankt-peterburg.jpg" alt="Санкт-Петербург" class="card__image">
-            <div class="card__description">
-              <p class="card__name">Санкт-Петербург</p>
-              <button class="btn btn_type_like" type="button"></button>
-            </div>
-          </li>
         </ul>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__text">&copy; 2022 Mesto Russia</p>
     </footer>
-    <section class="popup">
-      <div class="popup__overlay"></div>
-      <div class="popup__container">
-        <button class="btn btn_type_close" type="reset"></button>
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="edit-profile" name="edit-profile">
-          <input type="text" class="edit-profile__field edit-profile__field_type_name" placeholder="Имя" name="name">
-          <input type="text" class="edit-profile__field edit-profile__field_type_activity" placeholder="О себе" name="activity">
-          <button class="btn btn_type_save" type="submit">Сохранить</button>
-        </form>
-      </div>
-    </section>
-    </div>
+  </div>
+    <template id="card">
+      <li class="card__block">
+        <button class="btn btn_type_delete" type="button"></button>
+        <div class="card">
+          <img class="card__image">
+          <div class="card__description">
+            <p class="card__name"></p>
+            <button class="btn btn_type_like" type="button"></button>
+          </div>
+        </div>
+      </li>
+    </template>
+    <template id="full-card">
+      <section class="popup">
+        <div class="popup__overlay popup__card-overlay"></div>
+        <div class="popup__container popup__card-container">
+          <button class="btn btn_type_close" type="reset"></button>
+          <img class="popup__image">
+          <h3 class="popup__title-small"></h3>
+        </div>
+      </section>
+    </template>
+    <template id="popup">
+      <section class="popup">
+        <div class="popup__overlay"></div>
+        <div class="popup__container">
+          <button class="btn btn_type_close" type="reset"></button>
+          <h2 class="popup__title"></h2>
+          <form class="form" name="form">
+            <button class="btn btn_type_save" type="submit"></button>
+          </form>
+        </div>
+      </section>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
