@@ -9,7 +9,7 @@
   border: 1px solid #FFF;
   box-sizing: border-box;
 
-  transition: 1s ease-out 0.2s;
+  transition: 0.8s ease-out 0.2s;
 }
 
 .btn:hover {
