@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
 
-  max-width: 430px;
+  width: 430px;
   box-sizing: border-box;
 
   padding: 25px 22px;

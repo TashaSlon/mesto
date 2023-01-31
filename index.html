@@ -46,10 +46,16 @@
         <div class="popup__container">
           <button class="btn btn_type_close" type="reset"></button>
           <h2 class="popup__title">Редактировать профиль</h2>
-          <form class="form" name="form">
-            <input class="form__field form__field_type_name" type="text" placeholder="Имя" name="name">
-            <input class="form__field form__field_type_activity" type="text" placeholder="О себе" name="activity">
-            <button class="btn btn_type_save" type="submit">Сохранить</button>
+          <form class="form" name="form" novalidate>
+            <label class="form__field">
+              <input class="form__input form__input_type_name" type="text" id="name-input" required minlength="2" maxlength="40" placeholder="Имя">
+              <span class="form__input-error name-input-error"></span>
+            </label>
+            <label class="form__field">
+              <input class="form__input form__input_type_activity" type="text" id="activity-input" required minlength="2" maxlength="200" placeholder="О себе">
+              <span class="form__input-error activity-input-error"></span>
+            </label>
+            <button class="form__submit btn btn_type_save" type="submit">Сохранить</button>
           </form>
         </div>
       </section>
@@ -58,10 +64,16 @@
         <div class="popup__container">
           <button class="btn btn_type_close" type="reset"></button>
           <h2 class="popup__title">Новое место</h2>
-          <form class="form" name="form">
-            <input class="form__field form__field_type_title" type="text" placeholder="Название" name="title">
-            <input class="form__field form__field_type_link" type="text" placeholder="Ссылка на картинку" name="link">
-            <button class="btn btn_type_save" type="submit">Создать</button>
+          <form class="form" name="form" novalidate>
+            <label class="form__field">
+              <input class="form__input form__input_type_title" type="text" id="title-input" required minlength="2" maxlength="30" placeholder="Название">
+              <span class="form__input-error title-input-error"></span>
+            </label>
+            <label class="form__field">
+              <input class="form__input form__input_type_link" type="url" id="link-input" required placeholder="Ссылка на картинку">
+              <span class="form__input-error link-input-error"></span>
+            </label>
+            <button class="form__submit btn btn_type_save" type="submit">Создать</button>
           </form>
         </div>
       </section>
@@ -79,5 +91,6 @@
       </li>
     </template>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>

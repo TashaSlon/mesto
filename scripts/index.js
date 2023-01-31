@@ -5,18 +5,18 @@ const fullCardImage = fullCard.querySelector('.popup__image');
 const fullCardTitle = fullCard.querySelector('.popup__title-small');
 
 const profile = document.querySelector('#profile');
-const popupNameProfile = profile.querySelector('.form__field_type_name');
-const popupActivityProfile = profile.querySelector('.form__field_type_activity');
+const popupNameProfile = profile.querySelector('.form__input_type_name');
+const popupActivityProfile = profile.querySelector('.form__input_type_activity');
 const formProfile = profile.querySelector('.form');
 formProfile.addEventListener('submit', submitProfile);
-const fieldName = profile.querySelector('.form__field_type_name');
-const fieldActivity = profile.querySelector('.form__field_type_activity');
+const fieldName = profile.querySelector('.form__input_type_name');
+const fieldActivity = profile.querySelector('.form__input_type_activity');
 
 const add = document.querySelector('#add');
 const formAdd = add.querySelector('.form');
 formAdd.addEventListener('submit', submitAdd);
-const fieldTitle = add.querySelector('.form__field_type_title');
-const fieldLink = add.querySelector('.form__field_type_link');
+const fieldTitle = add.querySelector('.form__input_type_title');
+const fieldLink = add.querySelector('.form__input_type_link');
 const addBtn = document.querySelector('.btn_type_add');
 addBtn.addEventListener('click', openAdd);
 
@@ -154,6 +154,20 @@ const closeBtns = document.querySelectorAll('.btn_type_close');
 closeBtns.forEach (function (el) {
   const popup = el.closest('.popup');
   el.addEventListener ('click', () => closePopup(popup));
+});
+
+const overlays = document.querySelectorAll('.popup__overlay');
+overlays.forEach (function (el) {
+  const popup = el.closest('.popup');
+  el.addEventListener ('click', () => closePopup(popup));
+});
+
+
+document.addEventListener('keydown', function (evt) {
+  const popup = document.querySelector('.popup_opened');
+  if (evt.key === 'Escape') {
+    closePopup(popup);
+  }
 });
 
 createGallery(cards);
