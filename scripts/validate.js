@@ -66,6 +66,11 @@ const enableValidation = (selectors) => {
 
     formElement.addEventListener('submit', function (evt) {
       evt.preventDefault();
+
+      const inputList = Array.from(formElement.querySelectorAll(inputSelector));
+      const buttonElement = formElement.querySelector(submitButtonSelector);
+
+      toggleButtonState(inputList, buttonElement, inactiveButtonClass);
     });
   });
 };

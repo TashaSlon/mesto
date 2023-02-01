@@ -1,5 +1,7 @@
 .popup__card-container {
   padding: 0;
 
+  width: 75vw;
+
   background-color: transparent;
 }
