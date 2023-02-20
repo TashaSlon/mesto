@@ -35,11 +35,17 @@ function createGallery(cards) {
   gallery.innerHTML = '';
 
   cards.forEach(element => {
-    const card = new Card(element, '#card', openPopup);
-    gallery.append(card.createCard());
+    gallery.append(createCard(element));
   });
 
 }
+
+function createCard(item) {
+  const card = new Card(item, '#card', openPopup);
+  const cardElement = card.createCard();
+  return cardElement;
+}
+
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
@@ -73,12 +79,11 @@ function openAdd() {
 
 function submitAdd(evt) {
   evt.preventDefault();
-  const newCard = new Card({
+
+  gallery.prepend(createCard({
     name: fieldTitle.value,
     link: fieldLink.value
-  }, '#card', openPopup);
-
-  gallery.prepend(newCard.createCard());
+  }));
 
   evt.target.reset();
   closePopup(cardAdd);
