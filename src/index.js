@@ -62,8 +62,8 @@ function handleCardClick(name, link) {
 
 function openProfile() {
   const popup = new PopupWithForm('#profile', submitProfile);
-  popup.open();
   popup.setEventListeners();
+  popup.open();
   const userData = userInfo.getUserInfo();
 
   popupNameProfile.value = userData.name;
