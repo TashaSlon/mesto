@@ -1,0 +1,25 @@
+{
+  "name": "mesto",
+  "version": "0.0.1",
+  "description": "This is a project about intresting plases in Russia",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && webpack --mode production",
+    "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TashaSlon/mesto.git"
+  },
+  "author": "Natalya Plyusnina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TashaSlon/mesto/issues"
+  },
+  "homepage": "https://github.com/TashaSlon/mesto#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

@@ -1,10 +1,10 @@
 import { fullCard, fullCardImage, fullCardTitle } from './utils.js';
 
 export default class Card {
-  constructor(cardData, templateSelector, openPopup) {
+  constructor(cardData, templateSelector, handleCardClick) {
     this._cardData = cardData;
     this._templateSelector = templateSelector;
-    this._openPopup = openPopup;
+    this._handleCardClick = handleCardClick;
   }
 
   _getElement() {
@@ -39,20 +39,9 @@ export default class Card {
 
   _setImageListeners() {
 		this._cardImage.addEventListener('click', () => {
-			this._openCard();
+      this._handleCardClick(this._cardData.name, this._cardData.link);
 		});
 	}
-
-  _openCard() {
-    this._openPopup(fullCard);
-
-    const image = this._cardData.link;
-    const name = this._cardData.name;
-
-    fullCardImage.src = image;
-    fullCardImage.alt = name;
-    fullCardTitle.textContent = name;
-  }
 
   createCard () {
     this._element = this._getElement();
