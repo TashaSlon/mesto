@@ -13,7 +13,6 @@ export default class PopupWithForm extends Popup{
     fields.forEach(field => {
       data[field.name] = field.value;
     });
-    console.log(data);
     return data;
   }
 

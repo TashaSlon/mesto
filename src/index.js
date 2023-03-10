@@ -1,40 +1,36 @@
-import Card from '../scripts/Card.js';
-import FormValidator from '../scripts/FormValidator.js';
-import PopupWithForm from '../scripts/PopupWithForm.js';
-import PopupWithImage from '../scripts/PopupWithImage.js';
-import UserInfo from '../scripts/UserInfo.js';
+import Card from './components/Card.js';
+import FormValidator from './components/FormValidator.js';
+import PopupWithForm from './components/PopupWithForm.js';
+import PopupWithImage from './components/PopupWithImage.js';
+import UserInfo from './components/UserInfo.js';
+import './styles/index.css';
 
 import {
-  formProfile,
-  formAdd,
   addBtn,
   editBtn,
   cards,
   gallery,
-  cardAdd,
   popupNameProfile,
-  fieldActivity,
-  fieldLink,
-  fieldName,
-  fieldTitle,
   nameProfile,
   activityProfile,
   popupActivityProfile,
-  selectors,
-  fullCard,
-  fullCardImage,
-  fullCardTitle
-} from '../scripts/utils.js';
+  selectors
+} from './components/utils.js';
 
 const validatorProfile = new FormValidator(selectors, document.querySelector('.form-profile'));
 validatorProfile.enableValidation();
 
 const validatorAdd = new FormValidator(selectors, document.querySelector('.form-card'));
 validatorAdd.enableValidation();
-formAdd.addEventListener('submit', submitAdd);
 
 addBtn.addEventListener('click', openAdd);
 editBtn.addEventListener('click', openProfile);
+
+const popupProfile = new PopupWithForm('#profile', submitProfile);
+popupProfile.setEventListeners();
+
+const popupAdd = new PopupWithForm('#add', submitAdd);
+popupAdd.setEventListeners();
 
 const userInfo = new UserInfo('.profile__name', '.profile__activity');
 
@@ -45,7 +41,6 @@ function createGallery(cards) {
   cards.forEach(element => {
     gallery.append(createCard(element));
   });
-
 }
 
 function createCard(item) {
@@ -61,9 +56,7 @@ function handleCardClick(name, link) {
 }
 
 function openProfile() {
-  const popup = new PopupWithForm('#profile', submitProfile);
-  popup.setEventListeners();
-  popup.open();
+  popupProfile.open();
   const userData = userInfo.getUserInfo();
 
   popupNameProfile.value = userData.name;
@@ -75,9 +68,7 @@ function submitProfile(userData) {
 }
 
 function openAdd() {
-  const popup = new PopupWithForm('#add', submitAdd);
-  popup.open();
-  popup.setEventListeners();
+  popupAdd.open();
 }
 
 function submitAdd(cardData) {
