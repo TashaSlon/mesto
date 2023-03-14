@@ -1,14 +1,8 @@
-export const gallery = document.querySelector('.cards');
-
 export const popupNameProfile = profile.querySelector('.form__input_type_name');
 export const popupActivityProfile = profile.querySelector('.form__input_type_activity');
 
 export const addBtn = document.querySelector('.btn_type_add');
 export const editBtn = document.querySelector('.btn_type_edit');
-
-export const nameProfile = document.querySelector('.profile__name');
-export const activityProfile = document.querySelector('.profile__activity');
-
 
 const arkhyz = new URL('../images/arkhyz.jpg', import.meta.url);
 const chelybinsk = new URL('../images/chelyabinsk-oblast.jpg', import.meta.url);

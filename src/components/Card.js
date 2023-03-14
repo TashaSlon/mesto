@@ -1,5 +1,3 @@
-import { fullCard, fullCardImage, fullCardTitle } from './utils.js';
-
 export default class Card {
   constructor(cardData, templateSelector, handleCardClick) {
     this._cardData = cardData;
@@ -25,6 +23,7 @@ export default class Card {
 
   _deleteCard() {
     this._element.remove();
+    this._element = null;
   }
 
   _setLikeListeners() {
@@ -39,7 +38,7 @@ export default class Card {
 
   _setImageListeners() {
 		this._cardImage.addEventListener('click', () => {
-      this._handleCardClick(this._cardData.name, this._cardData.link);
+      this._handleCardClick(this._cardData);
 		});
 	}
 

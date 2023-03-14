@@ -1,27 +1,22 @@
-import Card from './components/Card.js';
-import FormValidator from './components/FormValidator.js';
-import PopupWithForm from './components/PopupWithForm.js';
-import PopupWithImage from './components/PopupWithImage.js';
-import UserInfo from './components/UserInfo.js';
-import './styles/index.css';
+import Card from '../components/Card.js';
+import FormValidator from '../components/FormValidator.js';
+import PopupWithForm from '../components/PopupWithForm.js';
+import PopupWithImage from '../components/PopupWithImage.js';
+import UserInfo from '../components/UserInfo.js';
+import Section from '../components/Section.js';
+import './index.css';
 
 import {
   addBtn,
   editBtn,
   cards,
-  gallery,
   popupNameProfile,
-  nameProfile,
-  activityProfile,
   popupActivityProfile,
   selectors
-} from './components/utils.js';
+} from '../components/utils.js';
 
 const validatorProfile = new FormValidator(selectors, document.querySelector('.form-profile'));
-validatorProfile.enableValidation();
-
 const validatorAdd = new FormValidator(selectors, document.querySelector('.form-card'));
-validatorAdd.enableValidation();
 
 addBtn.addEventListener('click', openAdd);
 editBtn.addEventListener('click', openProfile);
@@ -34,13 +29,10 @@ popupAdd.setEventListeners();
 
 const userInfo = new UserInfo('.profile__name', '.profile__activity');
 
+const section = new Section({ items: cards, renderer }, '.cards');
 
-function createGallery(cards) {
-  gallery.innerHTML = '';
-
-  cards.forEach(element => {
-    gallery.append(createCard(element));
-  });
+function renderer(item) {
+  section.addItem(createCard(item));
 }
 
 function createCard(item) {
@@ -49,14 +41,15 @@ function createCard(item) {
   return cardElement;
 }
 
-function handleCardClick(name, link) {
-  const popup = new PopupWithImage('#full-card', name, link);
-  popup.open();
+function handleCardClick(data) {
+  const popup = new PopupWithImage('#full-card');
+  popup.open(data);
   popup.setEventListeners();
 }
 
 function openProfile() {
   popupProfile.open();
+  validatorProfile.enableValidation();
   const userData = userInfo.getUserInfo();
 
   popupNameProfile.value = userData.name;
@@ -64,18 +57,19 @@ function openProfile() {
 }
 
 function submitProfile(userData) {
-  userInfo.setUserInfo(userData, nameProfile, activityProfile);
+  userInfo.setUserInfo(userData);
 }
 
 function openAdd() {
   popupAdd.open();
+  validatorAdd.enableValidation();
 }
 
 function submitAdd(cardData) {
-  gallery.prepend(createCard({
+  section.addItem(createCard({
     name: cardData.name,
     link: cardData.link
   }));
 }
 
-createGallery(cards);
+section.renderItems();
