@@ -16,7 +16,9 @@ import {
 } from '../components/utils.js';
 
 const validatorProfile = new FormValidator(selectors, document.querySelector('.form-profile'));
+validatorProfile.enableValidation();
 const validatorAdd = new FormValidator(selectors, document.querySelector('.form-card'));
+validatorAdd.enableValidation();
 
 addBtn.addEventListener('click', openAdd);
 editBtn.addEventListener('click', openProfile);
@@ -26,6 +28,9 @@ popupProfile.setEventListeners();
 
 const popupAdd = new PopupWithForm('#add', submitAdd);
 popupAdd.setEventListeners();
+
+const popupImage = new PopupWithImage('#full-card');
+popupImage.setEventListeners();
 
 const userInfo = new UserInfo('.profile__name', '.profile__activity');
 
@@ -42,14 +47,11 @@ function createCard(item) {
 }
 
 function handleCardClick(data) {
-  const popup = new PopupWithImage('#full-card');
-  popup.open(data);
-  popup.setEventListeners();
+  popupImage.open(data);
 }
 
 function openProfile() {
   popupProfile.open();
-  validatorProfile.enableValidation();
   const userData = userInfo.getUserInfo();
 
   popupNameProfile.value = userData.name;
@@ -62,7 +64,6 @@ function submitProfile(userData) {
 
 function openAdd() {
   popupAdd.open();
-  validatorAdd.enableValidation();
 }
 
 function submitAdd(cardData) {
