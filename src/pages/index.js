@@ -51,6 +51,7 @@ function handleCardClick(data) {
 }
 
 function openProfile() {
+  validatorProfile.resetValidation();
   popupProfile.open();
   const userData = userInfo.getUserInfo();
 
@@ -63,6 +64,7 @@ function submitProfile(userData) {
 }
 
 function openAdd() {
+  validatorAdd.resetValidation();
   popupAdd.open();
 }
 
